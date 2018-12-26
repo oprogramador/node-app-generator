@@ -24,7 +24,9 @@ done
 
 mv _README.md README.md
 rm generate.sh
-git remote set-url origin https://github.com/$GITHUB_USER/$APP_NAME.git
+rm -rf .git
+git init
 git add .
+git remote add origin https://github.com/$GITHUB_USER/$APP_NAME.git
 git commit -m 'generation'
 git push -u origin master
